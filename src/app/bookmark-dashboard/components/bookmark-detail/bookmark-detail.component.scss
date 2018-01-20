@@ -1,19 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
 
 * {
-    font: 400 18px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-html {
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+    font: 400 18px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 html,
@@ -65,13 +56,12 @@ input[type=number] {
     border-radius: 1px;
     box-shadow: 1px 1px 3px 1px #ccc;
     border: 1px solid #eee;
-    width: 100%;
 }
 
 button,
 .button {
     cursor: pointer;
-    background: orange;
+    background: #orange;
     border: 0;
     border-radius: 2px;
     padding: 5px 10px;
@@ -81,7 +71,7 @@ button,
 
 button:disabled {
     cursor: not-allowed;
-    background: #dedede;
+    background: #b598e4;
 }
 
 p {
@@ -116,13 +106,4 @@ h4 {
         clear: both;
         width: 100%;
     }
-}
-
-.error {
-    color: #da6969;
-    font-size: 10px;
-}
-
-div {
-    margin: 0 0 20px;
 }
