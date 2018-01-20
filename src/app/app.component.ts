@@ -5,25 +5,10 @@ interface Nav {
   name: string,
   exact: boolean
 }
-
 @Component({
   selector: 'app-root',
   styleUrls: ['app.component.scss'],
-  template: `
-    <div class="app">
-      <app-home></app-home>
-      <nav class="nav">
-        <a
-          *ngFor="let item of nav"
-          [routerLink]="item.link"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: item.exact }">
-          {{ item.name }}
-        </a>
-      </nav>
-      <router-outlet></router-outlet>
-    </div>
-  `
+  templateUrl:'./app.component.ts'
 })
 export class AppComponent {
   nav: Nav[] = [
