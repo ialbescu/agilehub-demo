@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
         <h3><a [href]="card.url" target="_blank" rel="noopener">{{card?.title}}</a></h3>
         <p>{{card?.description}}</p>
         <p style="text-align:right; ">
-          <a [routerLink]="['../view', card.id]" (click)="goToLink()" style="color: black; text-decoration:underline; font-size: 0.75rem;">
+          <a [routerLink]="['./view', card.id]" (click)="goToLink()" style="color: black; text-decoration:underline; font-size: 0.75rem;">
               Edit bookmark
           </a>
         </p>
