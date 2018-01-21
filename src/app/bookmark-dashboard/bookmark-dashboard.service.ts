@@ -27,7 +27,7 @@ export class BookmarkDashboardService {
 
   getBookmarks(): Observable<Bookmark[]> {
     return this.http
-      .get(BOOKMARK_API)
+      .get(BOOKMARK_API, { headers: this.headers })
       .pipe(
       map((response: HttpResponse<any>) => response),
       catchError((error: any) => this.handleError(error))
@@ -37,7 +37,7 @@ export class BookmarkDashboardService {
 
   getBookmark(id: number): Observable<Bookmark> {
     return this.http
-      .get(`${BOOKMARK_API}/${id}`)
+      .get(`${BOOKMARK_API}/${id}`, { headers: this.headers })
       .pipe(
       map((response: HttpResponse<any>) => response),
       catchError((error: any) => this.handleError(error))
@@ -47,7 +47,7 @@ export class BookmarkDashboardService {
 
   addBookmark(bookmark: Bookmark): Observable<Bookmark> {
     return this.http
-      .post(`${BOOKMARK_API}`, bookmark)
+      .post(`${BOOKMARK_API}`, bookmark, { headers: this.headers })
       .pipe(
       map((response: HttpResponse<any>) => { response; console.log('response', response) }),
       catchError((error: any) => this.handleError(error))
@@ -56,7 +56,7 @@ export class BookmarkDashboardService {
 
   updateBookmark(bookmark: Bookmark): Observable<Bookmark> {
     return this.http
-      .put(`${BOOKMARK_API}/${bookmark.id}`, bookmark)
+      .put(`${BOOKMARK_API}/${bookmark.id}`, bookmark, { headers: this.headers })
       .pipe(
       map((response: HttpResponse<any>) => response),
       catchError((error: any) => this.handleError(error))
@@ -65,7 +65,7 @@ export class BookmarkDashboardService {
 
   removeBookmark(bookmark: Bookmark): Observable<Bookmark> {
     return this.http
-      .delete(`${BOOKMARK_API}/${bookmark.id}`)
+      .delete(`${BOOKMARK_API}/${bookmark.id}`, { headers: this.headers })
       .pipe(
       map((response: HttpResponse<any>) => response),
       catchError((error: any) => this.handleError(error))
